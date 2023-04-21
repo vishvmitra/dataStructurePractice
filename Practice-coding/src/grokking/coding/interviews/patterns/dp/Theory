@@ -1,0 +1,58 @@
+# Dynamic Programming = Enhanced Recursion
+Recursion + cache
+
+# Identifying a DP problem
+1. Optimum solution (max/min/largest/smallest)
+2. Its a recursion problem with atleast 2 recursive calls in same function
+3. Choice - At every level we have to make a choice
+(Knapsack whether to keep current object in knapsack or not)
+
+# Approach:
+1. Write a recursive solution
+2. Memoize it (cache)
+
+           Recursive -> Memoize or Bottom-Up
+
+# DP major patters
+1. Knapsack
+2. LCS
+3. Matrix chain multiplication
+
+# Parent Problems (Patterns)
+1. 0-1 Knapsack (6)
+2. Unbounded Knapsack (5)
+3. Fibonacci (7)
+4. LCS(15)
+5. LIS(10)
+6. Kadane's Algo (6)
+7. Matrix chain multiplication
+8. DP on trees (4)
+9. DP on grid (14)
+10. Others (5)
+
+                Knapsack
+Fractional         0-1 knapsack                  Unbounded KnapSack
+Greedy                  DP                             DP
+
+
+#Writing Recursive Function
+Always call for smaller input moving towards base cond
+
+Function
+
+Base Cond: Smallest Valid Input
+Capacity = 0 or items[] -> empty => answer maxValue = 0;
+
+Recursive Cond: Make choice diagram
+
+              Item1
+                W1
+          /            \
+       W1 <= C          W1 > C
+       /        \           |
+   Keep      Reject       Reject
+
+
+DP:
+1. Keep storing the calculated values in a matrix/cache
+2. Before calling recursive function check if the value is present in matrix

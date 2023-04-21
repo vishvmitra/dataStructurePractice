@@ -1,9 +1,7 @@
 package interviewbit.arrays;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Driver {
 
@@ -25,8 +23,12 @@ public class Driver {
         /*var cs = new CompareStrings();
         System.out.print(cs.solution("ab12c", "1zz456"));*/
 
-        var ca = new CountAnagrams();
+        /*var ca = new CountAnagrams();
         int[] in = new int[] {30, 72, 3, 227};
-        System.out.print(ca.solution(in));
+        System.out.print(ca.solution(in));*/
+
+        Set s = new TreeSet<Object>();
+        s.add(10);
+        s.add("ABC");
     }
 }
